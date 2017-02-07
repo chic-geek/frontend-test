@@ -1,23 +1,33 @@
-// -----------------------------------------------------------------------------
-// PROJECT:
-// AUTHOR:
-// DATE:
-// -----------------------------------------------------------------------------
+// ========================================================
+// @source: source sass imports
+// ========================================================
 //
 
-// Core
-// -----------------------------------------------------------------------------
-//
-@import "core/scaffold";
+// SETTINGS: global variables, config switches
+@import "settings/s--breakpoints";
+@import "settings/s--measurements";
 
 
-// Modules
-// -----------------------------------------------------------------------------
-//
-@import "modules/module1";
+// TOOLS: default mixins and functions
+@import "tools/t--remcalc";
+@import "tools/t--clearfix";
 
 
+// GENERIC: ground-zero styles (Normalize.css, resets, box-sizing)
+@import "generic/g--normalize";
+@import "generic/g--boxsizing";
 
-// Helpers
-// -----------------------------------------------------------------------------
-//
+
+// ELEMENTS: unclassed HTML elements (type selectors)
+
+
+// OBJECTS: cosmetic-free design patterns
+@import "objects/o--grid";
+
+
+// COMPONENTS: designed components, chunks of UI
+@import "components/c--wrap";
+
+
+// UTILITIES: helpers and overrides
+@import "utilities/u--helpers";

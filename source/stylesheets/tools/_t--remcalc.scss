@@ -1,0 +1,21 @@
+// ========================================================
+// @tools: rem calculator
+// ========================================================
+// 
+
+// mixin definition
+//
+@function calculateRem($size) {
+   $remSize: $size / $global-font-size;
+	@return #{$remSize}rem;
+}
+
+@mixin rem($element, $value) {
+	#{$element}: $value;
+	#{$element}: calculateRem($value);
+}
+
+
+// mixin usage
+//
+// @include remcalc(margin-left, 10px);
