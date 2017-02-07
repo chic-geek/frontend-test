@@ -8,7 +8,7 @@
 $grid-bp--sm: $bp--sm;
 $grid-bp--md: $bp--md;
 $grid-bp--lg: $bp--lg;
-$grid-margin: 20px;
+$grid-margin: $global-spacing--sm;
 
 
 // component block
@@ -18,7 +18,7 @@ $grid-margin: 20px;
    list-style: none;
    margin: 0;
    padding: 0;
-   margin-left: -$grid-margin;
+   @include remcalc(margin-left, -$grid-margin);
    text-align: left;
    
    
@@ -27,7 +27,7 @@ $grid-margin: 20px;
    &__unit {
       display: inline-block;
       margin-right: -4px;
-      padding-left: $grid-margin;
+      @include remcalc(padding-left, $grid-margin);
       transition: width .2s ease-in-out;
       vertical-align: top;
       width: 100%;

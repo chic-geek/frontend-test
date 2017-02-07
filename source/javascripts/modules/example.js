@@ -1,7 +1,7 @@
 var moduleName = (function() {
 
   function init() {
-    alert("Hello World!");
+    console.log("Hello World!");
   }
   
   return {

@@ -13,8 +13,8 @@ $wrap-maxW: 1200px;
 .wrap {
   margin-left: auto;
   margin-right: auto;
-  padding-left: $spacing--sm;
-  padding-right: $spacing--sm;
-  max-width: $wrap-maxW;
+  @include remcalc(padding-left, $global-spacing--sm);
+  @include remcalc(padding-right, $global-spacing--sm);
+  @include remcalc(max-width, $wrap-maxW);
   width: 100%;
 }

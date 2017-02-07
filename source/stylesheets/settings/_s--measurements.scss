@@ -3,5 +3,9 @@
 // ========================================================
 //
 
+// type
 $global-font-size: 16px;
-$global-spacing: @include rem(20);
+
+// spacing
+$global-spacing--xs: 10px;
+$global-spacing--sm: $global-spacing--xs * 2;

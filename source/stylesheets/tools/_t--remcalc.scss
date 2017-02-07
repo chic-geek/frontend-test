@@ -10,7 +10,7 @@
 	@return #{$remSize}rem;
 }
 
-@mixin rem($element, $value) {
+@mixin remcalc($element, $value) {
 	#{$element}: $value;
 	#{$element}: calculateRem($value);
 }
