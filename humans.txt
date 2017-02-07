@@ -1,9 +1,9 @@
 /* TEAM */
-	UI developer: Your Name
-	Contact: you [at] yourdomain.org
-	Twitter: @???
-	LinkedIn: https://uk.linkedin.com/in/your-id-here
-	From: Your Country / Location
+	UI developer: Chris Brett
+	Contact: c.brett@icloud.com
+	Twitter: @imchrisbrett
+	LinkedIn: https://uk.linkedin.com/in/chris-brett-ba7a4149
+	From: Englond / London
 
 /**
  * Please leave us your contact details here so we can be sure we can get back in touch.
