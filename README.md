@@ -56,3 +56,20 @@ The design is provided in various formats.
 - **Sketch** : Our favourite. If you're on Mac you can get a [free trial of Sketch App](https://www.sketchapp.com/).
 - **Zeplin** : Providing Sketch documents for developers - you might need to sign up for a trial to [access our Zeplin project](http://zpl.io/OrAI).
 - **PDF & PNG** : Hopefully you won't need this fallback, let us know if that's all you had to work from.
+
+## Getting up and running
+
+Checkout the codebase, make sure you have Gulp.js installed and run:
+```
+npm install
+```
+
+This will load all `node_modules` requried.
+
+The next move is to run:
+```
+gulp pipeline-serve
+```
+This will start up the server and build everything you require.
+
+In order to see the output in browser, navigate to localhost:8080 (8080 was used due to Cloud9).
