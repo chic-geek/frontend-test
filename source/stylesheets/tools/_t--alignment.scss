@@ -1,0 +1,28 @@
+// ========================================================
+// @tools: alignment
+// ========================================================
+// 
+
+// mixin definition
+//
+@mixin align (
+  $child: "div",
+  $x: center,
+  $y: middle
+) {
+
+  	display: table;
+
+	& > #{$child} {
+		display: table-cell;
+		text-align: $x;
+		vertical-align: $y;
+	}
+}
+
+
+// mixin usage
+//
+// .mixup--box-element {
+// 	@include align(".mixup--child-element", center, middle);
+// }

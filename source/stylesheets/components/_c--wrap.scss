@@ -3,18 +3,18 @@
 // ========================================================
 // 
 
-// config
+// component config
 //
-$wrap-maxW: 1200px;
+$c-wrap__maxW: 1000px;
 
 
 // component block
 //
-.wrap {
+.c-wrap {
   margin-left: auto;
   margin-right: auto;
   @include remcalc(padding-left, $global-spacing--sm);
   @include remcalc(padding-right, $global-spacing--sm);
-  @include remcalc(max-width, $wrap-maxW);
+  @include remcalc(max-width, $c-wrap__maxW);
   width: 100%;
 }

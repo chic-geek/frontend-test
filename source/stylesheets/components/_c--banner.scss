@@ -1,0 +1,31 @@
+// ========================================================
+// @component: banner
+// ========================================================
+// 
+
+// component config
+//
+$c-banner__bg-color: $col-orange--1;
+$c-banner__spacing: $global-spacing--md;
+
+// component block
+//
+.c-banner {
+  background-color: $c-banner__bg-color;
+  color: white;
+  @include remcalc(font-size, 20px);
+  @include remcalc(padding-top, $c-banner__spacing);
+  @include remcalc(padding-bottom, $c-banner__spacing);
+  
+  
+  // component elements
+  //
+  &__content {
+    @include remcalc(margin-bottom, $global-spacing--sm);
+    @media(min-width: $bp--sm) { margin-bottom: 0; }
+  }
+  
+  &__action {
+    @media(min-width: $bp--sm) { float: right; }
+  }
+}

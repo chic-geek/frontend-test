@@ -6,11 +6,14 @@
 // SETTINGS: global variables, config switches
 @import "settings/s--breakpoints";
 @import "settings/s--measurements";
+@import "settings/s--colors";
+@import "settings/s--fonts";
 
 
 // TOOLS: default mixins and functions
 @import "tools/t--remcalc";
 @import "tools/t--clearfix";
+@import "tools/t--alignment";
 
 
 // GENERIC: ground-zero styles (Normalize.css, resets, box-sizing)
@@ -19,14 +22,23 @@
 
 
 // ELEMENTS: unclassed HTML elements (type selectors)
+@import "elements/e--typography";
 
 
 // OBJECTS: cosmetic-free design patterns
 @import "objects/o--grid";
+@import "objects/o--list";
 
 
 // COMPONENTS: designed components, chunks of UI
 @import "components/c--wrap";
+@import "components/c--banner";
+@import "components/c--button";
+@import "components/c--article";
+@import "components/c--hero";
+@import "components/c--page-head";
+@import "components/c--page-foot";
+@import "components/c--overlay-nav";
 
 
 // UTILITIES: helpers and overrides

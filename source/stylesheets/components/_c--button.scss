@@ -1,0 +1,37 @@
+// ========================================================
+// @component: button
+// ========================================================
+// 
+
+// component config
+//
+$c-btn__col--inverse: white;
+$c-btn__col--inverse__text-col: $col-grey--1;
+
+
+// component block
+//
+.c-btn {
+  cursor: pointer;
+  color: $c-btn__col--inverse__text-col;
+  display: inline-block;
+  @include remcalc(font-size, 10px);
+  @include remcalc(letter-spacing, 2px);
+  @include remcalc(padding-top, $global-spacing--xs);
+  @include remcalc(padding-bottom, $global-spacing--xs);
+  @include remcalc(padding-left, $global-spacing--lg);
+  @include remcalc(padding-right, $global-spacing--lg);
+  text-decoration: none;
+  text-transform: uppercase;
+  
+  
+  // component modifiers
+  //
+  &--rounded {
+    @include remcalc(border-radius, 50px);
+  }
+  
+  &--inverse {
+    background-color: $c-btn__col--inverse;
+  }
+}

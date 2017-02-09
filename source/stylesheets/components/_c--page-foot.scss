@@ -1,0 +1,57 @@
+// ========================================================
+// @component: page-foot
+// ========================================================
+// 
+
+// component config
+//
+$page-foot__list-col: $col-grey--6;
+$page-foot__list-head-col: $col-grey--4;
+
+
+// component block
+//
+.c-page-foot {
+  @include clearfix;
+  @include remcalc(padding-bottom, $global-spacing--sm);
+  
+  @media(min-width: $bp--sm) { 
+    @include remcalc(padding-top, $global-spacing--lg);
+    width: 75%; 
+  }
+  
+  &__section {
+    float: left;
+    @include remcalc(margin-bottom, 20px);
+    width: 33.3333%;
+    @media(min-width: $bp--sm) { width: 22%; }
+    
+    &:first-child {
+      width: 100%;
+      @media(min-width: $bp--sm) { width: 34%; }
+    }
+  }
+  
+  &__list {
+    &-item {
+      @include remcalc(font-size, 12px);
+      line-height: 1.8;
+      text-decoration: none;
+      
+      a { 
+        color: $page-foot__list-col; 
+        text-decoration: none;
+      }
+    }
+    
+    .c-page-foot__list-head {
+      display: block;
+      @include remcalc(font-size, 10px);
+      @include remcalc(letter-spacing, 1px);
+      @include remcalc(margin-bottom, 10px);
+      text-transform: uppercase;
+      
+      a { color: $page-foot__list-head-col; }
+    }
+  }
+}

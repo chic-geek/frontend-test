@@ -3,7 +3,7 @@
 // ========================================================
 //
 
-// config
+// component config
 //
 $grid-bp--sm: $bp--sm;
 $grid-bp--md: $bp--md;
@@ -13,7 +13,7 @@ $grid-margin: $global-spacing--sm;
 
 // component block
 //
-.grid {
+.o-grid {
    direction: ltr;
    list-style: none;
    margin: 0;
@@ -25,6 +25,7 @@ $grid-margin: $global-spacing--sm;
    // component elements
    //
    &__unit {
+      direction: ltr;
       display: inline-block;
       margin-right: -4px;
       @include remcalc(padding-left, $grid-margin);
@@ -126,8 +127,18 @@ $grid-margin: $global-spacing--sm;
    // component modifiers
    //
    &--middle {
-      > .grid__unit { vertical-align: middle; }
+      > .o-grid__unit { vertical-align: middle; }
    }
    
    &--rev { direction: rtl; }
+   
+   &--rev--m { 
+      direction: rtl;
+      @media(min-width: $bp--sm) {  direction: ltr; }
+   }
+   
+   &--rev--t { 
+      direction: ltr;
+      @media(min-width: $bp--sm) {  direction: rtl; }
+   }
 }

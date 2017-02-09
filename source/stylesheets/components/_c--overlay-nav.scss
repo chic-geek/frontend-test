@@ -1,0 +1,46 @@
+// ========================================================
+// @component: overlay-nav
+// ========================================================
+// 
+
+// component config
+//
+
+
+// component block
+//
+.c-overlay-nav {
+  background-color: white;
+  min-height: 100%;
+  @include remcalc(min-width, 300px);
+  position: fixed;
+  @include remcalc(padding-left, 40px);
+  @include remcalc(padding-right, 40px);
+  @include remcalc(padding-top, 40px);
+  right: 0;
+  transform: translateX(100%);
+  transition: .3s ease-in-out;
+  z-index: 2;
+  
+  &__blind {
+    opacity: 0;
+    transition: 0.2s ease-in-out;
+  }
+}
+
+.js-overlay-active {
+  html,
+  body {
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .c-overlay-nav {
+    box-shadow: -5px 0px 20px 0px rgba(0,0,0,0.5);
+    transform: translateX(0);
+  }
+  
+  .c-overlay-nav__blind {
+    opacity: 1;
+  }
+}

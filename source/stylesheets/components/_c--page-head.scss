@@ -1,0 +1,93 @@
+// ========================================================
+// @component: page-head
+// ========================================================
+// 
+
+// component config
+//
+$c-page-head__menubtn-col: $col-orange--1;
+
+
+// component block
+//
+.c-page-head {
+  left: 0;
+  @include remcalc(padding-top, $global-spacing--sm);
+  @include remcalc(padding-bottom, $global-spacing--sm);
+  @include remcalc(padding-left, $global-spacing--sm);
+  @include remcalc(padding-right, $global-spacing--sm);
+  position: fixed;
+  right: 0;
+  top: 0;
+  transition: background-color .2s ease-in-out;
+  width: 100%;
+  @include clearfix;
+  
+  
+  // component elements
+  //
+  &__pimary-nav {
+    display: none;
+    @media(min-width: 900px) { display: block; }
+    
+    @include remcalc(line-height, 53px);
+    @include remcalc(min-height, 53px);
+    text-align: center;
+    
+    &__item {
+      @include remcalc(font-size, 12px);
+      @include remcalc(letter-spacing, 1.5px);
+      @include remcalc(margin-left, $global-spacing--lg);
+      @include remcalc(margin-right, $global-spacing--lg);
+      text-transform: uppercase;
+      
+      a { 
+        color: white;
+        text-decoration: none;
+      }
+    }
+  }
+  
+  &__menubtn {
+    background-color: $c-page-head__menubtn-col;
+    color: white;
+    display: inline-block;
+    float: right;
+    @include remcalc(min-height, 53px);
+    @include remcalc(padding-top, 13px);
+    @include remcalc(padding-bottom, 16px);
+    @include remcalc(padding-left, 20px);
+    @include remcalc(padding-right, 20px);
+    text-decoration: none;
+    
+    @media(min-width: 900px) { 
+      float: none;
+      position: absolute;
+      right: $global-spacing--sm;
+      top: $global-spacing--sm;
+    }
+    
+    &-icon,
+    &-meta {
+      display: inline-block;
+      line-height: 1;
+      vertical-align: middle;
+    }
+    
+    &-icon {
+      img {
+        display: block;
+      }
+    }
+    
+    &-meta {
+      @include remcalc(font-size, 14px);
+      @include remcalc(letter-spacing, 0.23px);
+      @include remcalc(padding-left, 10px);
+    }
+  }
+  
+  &--is-active {
+    background-color: rgba(0,0,0,0.85);
+  }
+}

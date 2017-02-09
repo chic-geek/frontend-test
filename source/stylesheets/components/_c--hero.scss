@@ -1,0 +1,67 @@
+// ========================================================
+// @component: hero
+// ========================================================
+// 
+
+// component config
+//
+$c-hero__grad-col--1: $col-grey--5;
+$c-hero__grad-col--2: $col-grey--1;
+
+
+// component block
+//
+.c-hero {
+  background: $c-hero__grad-col--2;
+  background: -moz-linear-gradient(left,  $c-hero__grad-col--1 0%, $c-hero__grad-col--2 100%);
+  background: -webkit-linear-gradient(left,  $c-hero__grad-col--1 0%,$c-hero__grad-col--2 100%);
+  background: linear-gradient(to right,  $c-hero__grad-col--1 0%,$c-hero__grad-col--2 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#{$c-hero__grad-col--1}', endColorstr='#{$c-hero__grad-col--2}',GradientType=1 );
+  background-image: radial-gradient(farthest-corner at 45px 45px , $c-hero__grad-col--1 10%, $c-hero__grad-col--2 70%);
+  height: 300px;
+  transition: height .3s ease-in-out;
+  width: 100%;
+  @include align(".c-hero__wrap", center, middle);
+  @media(min-width: $bp--sm) { height: 450px; }
+  @media(min-width: $bp--md) { height: 600px; }
+  
+  
+  // component elements
+  //
+  &__branding {
+    
+    &-icon,
+    &-name {
+      display: inline-block;
+      vertical-align: middle;
+    }
+    
+    &-icon {
+      max-width: 13%;
+      @media(min-width: $bp--sm) { max-width: 100%; }
+      
+      img {
+        display: block;
+      }
+    }
+    
+    &-name {
+      color: white;
+      @include remcalc(font-size, 34px);
+      font-weight: 700;
+      @include remcalc(letter-spacing, 4px);
+      @include remcalc(padding-left, 5px);
+      text-transform: uppercase;
+      
+      @media(min-width: $bp--sm) {
+        @include remcalc(font-size, 62px);
+        @include remcalc(letter-spacing, 5px);
+      }
+      
+      @media(min-width: $bp--md) {
+        @include remcalc(font-size, 72px);
+        @include remcalc(letter-spacing, 6px);
+      }
+    }
+  }
+}

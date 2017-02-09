@@ -1,0 +1,84 @@
+// ========================================================
+// @component: article
+// ========================================================
+// 
+
+// component config
+//
+$c-article__heading-col: $col-grey--1;
+$c-article__subheading-col: $col-grey--4;
+$c-article__aside-bg-col: $col-grey--2;
+$c-article__text-col: $col-grey--3;
+
+
+// component block
+//
+.c-article {
+  color: $c-article__text-col;
+  @include remcalc(padding-top, $global-spacing--lg);
+  @include remcalc(padding-bottom, $global-spacing--lg);
+  @media(min-width: $bp--sm) { @include remcalc(padding-top, $global-spacing--xl); }
+  
+  
+  // component elements
+  //
+  &__heading {
+    color: $c-article__heading-col;
+    font-weight: 400;
+    @include remcalc(font-size, 32px);
+    line-height: 1.2;
+    @include remcalc(padding-bottom, $global-spacing--lg);
+    
+    @media(min-width: $bp--sm) { 
+      @include remcalc(font-size, 42px);
+      max-width: 75%;
+      margin-left: auto;
+      margin-right: auto;
+      @include remcalc(padding-bottom, $global-spacing--xl);
+      text-align: center; 
+    }
+  }
+  
+  &__subheading {
+    color: $c-article__subheading-col;
+    font-weight: 400;
+    @include remcalc(font-size, 24px);
+    @include remcalc(margin-bottom, $global-spacing--sm);
+  }
+  
+  &__para {
+    @include remcalc(font-size, 18px);
+    @include remcalc(margin-bottom, $global-spacing--sm);
+  }
+  
+  &__content {
+    @media(min-width: $bp--sm) {
+      @include remcalc(padding-left, $global-spacing--lg);
+      @include remcalc(padding-right, $global-spacing--lg);
+    }
+  }
+  
+  &__aside {
+    background-color: $c-article__aside-bg-col;
+    @include remcalc(padding-top, $global-spacing--xl);
+    @include remcalc(padding-bottom, $global-spacing--xl);
+    @include remcalc(padding-left, $global-spacing--lg);
+    @include remcalc(padding-right, $global-spacing--lg);
+  }
+  
+  &__meta {
+    @include remcalc(margin-top, $global-spacing--lg);
+    
+    &-alpha {
+      color: $c-article__subheading-col;
+      @include remcalc(font-size, 13px);
+      @include remcalc(letter-spacing, 1.18px);
+    }
+    
+    &-beta,
+    &-gamma {
+      display: block;
+      @include remcalc(font-size, 14px);
+    }
+  }
+}

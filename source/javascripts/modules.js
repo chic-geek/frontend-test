@@ -8,4 +8,4 @@
 
 // Module scripts
 // ------------------------------------------------------------------------
-//=require modules/example.js
+//=require modules/highlightNav.js
